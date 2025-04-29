@@ -8,7 +8,6 @@ public class RecursiveLister extends JFrame {
     private JTextArea textArea;
 
     public RecursiveLister() {
-        // Window title
         setTitle("Recursive File Lister");
 
         setSize(600, 400);
@@ -52,7 +51,7 @@ public class RecursiveLister extends JFrame {
             for (File file : files) {
                 textArea.append(file.getAbsolutePath() + "\n");
                 if (file.isDirectory()) {
-                    listFiles(file, textArea); // Recurse into subdirectory
+                    listFiles(file, textArea);
                 }
             }
         }
